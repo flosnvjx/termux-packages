@@ -2,17 +2,9 @@ name: Packages
 
 on:
   push:
-    branches:
-    - master
     paths:
     - 'packages/**'
     - 'root-packages/**'
-    - 'x11-packages/**'
-  pull_request:
-    paths:
-    - 'packages/**'
-    - 'root-packages/**'
-    - 'x11-packages/**'
   workflow_dispatch:
     inputs:
       packages:
@@ -31,7 +23,7 @@ jobs:
       NDK: "/opt/termux/android-ndk"
     strategy:
       matrix:
-        target_arch: [aarch64, arm, i686, x86_64]
+        target_arch: [arm, x86_64]
       fail-fast: false
     steps:
     - name: Clone repository
@@ -229,7 +221,7 @@ jobs:
   upload:
     permissions:
       contents: read
-    if: github.event_name != 'pull_request'
+    if: github.event_name != 'pull_request' && github.repository == 'termux/termux-packages'
     needs: build
     runs-on: ubuntu-latest
     steps:
