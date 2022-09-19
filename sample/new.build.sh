@@ -2,6 +2,7 @@ TERMUX_PKG_HOMEPAGE=
 TERMUX_PKG_DESCRIPTION=""
 # $PREFIX/share/LICENSES/
 TERMUX_PKG_LICENSE=""
+#TERMUX_PKG_LICENSE_FILE=""
 TERMUX_PKG_MAINTAINER="@termux"
 TERMUX_PKG_VERSION=
 TERMUX_PKG_SRCURL=
@@ -18,8 +19,13 @@ TERMUX_PKG_SHA256=SKIP_CHECKSUM
 termux_step_make() {
 #	termux_setup_rust
 #	cargo build --jobs $TERMUX_MAKE_PROCESSES --target $CARGO_TARGET_NAME --release
+#	termux_setup_golang
+#	mkdir bin
+#	go build -o ./bin -trimpath
 }
 
 termux_step_make_install() {
 #	install -Dm700 -t $TERMUX_PREFIX/bin target/${CARGO_TARGET_NAME}/release/%BINNAME%
+#	install -Dm700 -t $TERMUX_PREFIX/bin bin/*
+#	install -Dm600 -t $TERMUX_PREFIX/share/doc/$TERMUX_PKG_NAME README.*
 }
