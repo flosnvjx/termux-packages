@@ -1,5 +1,5 @@
-TERMUX_PKG_HOMEPAGE=https://core.tcl.tk/tcllib/
-TERMUX_PKG_DESCRIPTION="Tcl Standard Library package collection"
+TERMUX_PKG_HOMEPAGE=https://core.tcl-lang.org/tcllib/
+TERMUX_PKG_DESCRIPTION="Tcl Standard Library"
 TERMUX_PKG_LICENSE="custom"
 TERMUX_PKG_LICENSE_FILE="license.terms"
 TERMUX_PKG_MAINTAINER="@termux"
@@ -10,7 +10,15 @@ TERMUX_PKG_DEPENDS="tcl"
 TERMUX_PKG_BUILD_IN_SRC=true
 TERMUX_PKG_AUTO_UPDATE=true
 TERMUX_PKG_UPDATE_METHOD=repology
-TERMUX_PKG_HOSTBUILD=true
+TERMUX_PKG_PLATFORM_INDEPENDENT=true
+
+termux_step_configure() {
+	true
+}
+
+termux_step_make() {
+	true
+}
 
 termux_step_make_install() {
 	tclsh installer.tcl \
