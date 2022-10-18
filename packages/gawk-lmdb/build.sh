@@ -1,0 +1,10 @@
+TERMUX_PKG_HOMEPAGE="https://sourceforge.net/projects/gawkextlib/"
+TERMUX_PKG_DESCRIPTION="LMDB extension for gawk (utilize liblmdb)"
+TERMUX_PKG_LICENSE="GPL-3.0"
+TERMUX_PKG_MAINTAINER="@termux-user-repository"
+TERMUX_PKG_VERSION="1.1.1"
+TERMUX_PKG_SRCURL="https://downloads.sourceforge.net/gawkextlib/$TERMUX_PKG_NAME-$TERMUX_PKG_VERSION.tar.gz"
+TERMUX_PKG_SHA256=SKIP_CHECKSUM
+TERMUX_PKG_DEPENDS="gawkextlib, liblmdb"
+TERMUX_PKG_AUTO_UPDATE=true
+TERMUX_PKG_UPDATE_METHOD=repology
