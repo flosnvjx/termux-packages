@@ -23,3 +23,14 @@ termux_step_make() {
 		./src/github.com/gopasspw/gopass/gopass \
 		"$TERMUX_PREFIX"/bin/gopass
 }
+
+termux_step_post_make_install() {
+	cd "$TERMUX_PKG_SRCDIR"
+	install -Dm600 gopass.1 -t "$TERMUX_PREFIX/share/man/man1"
+	install -Dm600 bash.completion "$TERMUX_PREFIX/share/bash-completion/completions/gopass"
+	install -Dm600 zsh.completion "$TERMUX_PREFIX/share/zsh/site-functions/_gopass"
+	install -Dm600 fish.completion "$TERMUX_PREFIX/share/fish/vendor_completions.d/gopass.fish"
+	install -Dm600 {README,CHANGELOG,ARCHITECTURE}.md -t "$TERMUX_PREFIX/share/doc/$TERMUX_PKG_NAME"
+	cd ./docs
+	cp --parents -r * -t "$TERMUX_PREFIX/share/doc/$TERMUX_PKG_NAME"
+}
