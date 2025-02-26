@@ -2,6 +2,14 @@ TERMUX_PKG_HOMEPAGE=https://github.com/termux/termux-core-package
 TERMUX_PKG_DESCRIPTION="Utils for Termux core"
 TERMUX_PKG_LICENSE="MIT"
 TERMUX_PKG_MAINTAINER="@termux"
+TERMUX_PKG_VERSION=0.1.0
+
+# FIXME: Fix urls
+TERMUX_PKG_SRCURL=file:///home/builder/termux-packages/sources/termux-core-package
+TERMUX_PKG_SHA256=SKIP_CHECKSUM
+
+#TERMUX_PKG_SRCURL=https://github.com/termux/termux-core-package/archive/refs/tags/${TERMUX_PKG_VERSION}.tar.gz
+#TERMUX_PKG_SHA256=xxx
 
 # FIXME: uncomment
 #TERMUX_PKG_ESSENTIAL=true
