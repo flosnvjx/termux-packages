@@ -11,8 +11,8 @@ TERMUX_PKG_EXTRA_CONFIGURE_ARGS="
 --host=$TERMUX_BUILD_TUPLE
 --with-system-libffi
 --disable-ld-override"
-TERMUX_PKG_REPLACES="ghc-libs-static, ghc"
-TERMUX_PKG_PROVIDES="ghc"
+TERMUX_PKG_REPLACES="ghc-libs-static, ghc-libs"
+TERMUX_PKG_PROVIDES="ghc-libs, ghc-libs-static"
 TERMUX_PKG_NO_STATICSPLIT=true
 
 termux_step_pre_configure() {
