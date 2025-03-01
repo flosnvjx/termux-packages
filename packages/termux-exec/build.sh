@@ -2,10 +2,14 @@ TERMUX_PKG_HOMEPAGE=https://github.com/termux/termux-exec-package
 TERMUX_PKG_DESCRIPTION="A LD_PRELOAD shared library for proper functioning of the Termux execution environment"
 TERMUX_PKG_LICENSE="Apache-2.0"
 TERMUX_PKG_MAINTAINER="@termux"
-TERMUX_PKG_VERSION=0.4
-TERMUX_PKG_REVISION=2
-TERMUX_PKG_SRCURL=https://github.com/termux/termux-exec/archive/v$TERMUX_PKG_VERSION.tar.gz
-TERMUX_PKG_SHA256=9a8d42d211a7d461d61dcd4e3ef984014c2c2c696cfd6394bae389af13572627
+TERMUX_PKG_VERSION=1:2.0.0
+
+# FIXME: Fix urls
+TERMUX_PKG_SRCURL=file:///home/builder/termux-packages/sources/termux-exec
+TERMUX_PKG_SHA256=SKIP_CHECKSUM
+
+#TERMUX_PKG_SRCURL=https://github.com/termux/termux-exec-package/archive/refs/tags/${TERMUX_PKG_VERSION}.tar.gz
+#TERMUX_PKG_SHA256=xxx
 
 TERMUX_PKG_BUILD_DEPENDS="termux-core"
 TERMUX_PKG_ESSENTIAL=true
