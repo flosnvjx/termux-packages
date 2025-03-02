@@ -108,8 +108,8 @@ diff -u -r ../openfoam-OpenFOAM-v2212/wmake/rules/General/Clang/c++ wmake/rules/
  #------------------------------------------------------------------------------
  SUFFIXES   += .C .cc .cpp .cxx
  
--CC         := clang++$(COMPILER_VERSION) -std=c++14
-+CC         := @TERMUX_COMPILER_PREFIX@-clang++$(COMPILER_VERSION) -std=c++14
+-CC         := clang++$(COMPILER_VERSION) -std=c++17
++CC         := @TERMUX_COMPILER_PREFIX@-clang$(COMPILER_VERSION) -std=c++17
  
  c++ARCH    :=
  c++DBUG    :=
