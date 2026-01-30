@@ -1,0 +1,13 @@
+diff --git a/src/opusenc.c b/src/opusenc.c
+index 6ad3d91..e974e17 100644
+--- a/src/opusenc.c
++++ b/src/opusenc.c
+@@ -430,7 +430,7 @@ static OggOpusEnc *ope_encoder_create_callbacks_impl(const OpusEncCallbacks *cal
+     opeint_encoder_ctl(&enc->st, OPUS_SET_EXPERT_FRAME_DURATION(OPUS_FRAMESIZE_20_MS));
+   }
+   if (rate != 48000) {
+-    enc->re = speex_resampler_init(channels, rate, 48000, 5, NULL);
++    enc->re = speex_resampler_init(channels, rate, 48000, 10, NULL);
+     if (enc->re == NULL) goto fail;
+     speex_resampler_skip_zeros(enc->re);
+   } else {
