@@ -15,4 +15,5 @@ termux_step_pre_configure() {
 	export OPUSFILE_LIBS="-Wl,-Bstatic -lopusfile -Wl,-Bdynamic"
 	export OPUSURL_LIBS="-Wl,-Bstatic -lopusurl -Wl,-Bdynamic"
 	export LIBOPUSENC_LIBS="-Wl,-Bstatic -lopusenc -Wl,-Bdynamic"
+	export TERMUX_PKG_MAKE_PROCESSES=1
 }
